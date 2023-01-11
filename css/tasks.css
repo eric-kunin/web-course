@@ -1,0 +1,31 @@
+body {
+  background-image: url('../img/tile.jpg');
+}
+
+/* do in the center! */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px; /* set specific height */
+}
+
+.myTitle{
+  max-width: 80%; /* You can adjust this value */
+  margin:auto;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.myFormbg {
+  margin:auto;
+  max-width: 80%; /* You can adjust this value */
+}
+
+
+
+
