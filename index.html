@@ -4,19 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/tasks.css" />
     <script defer src="js/tasks.js"></script>
     <title>Task Board</title>
+    <!-- <style>
+      @import url("https://fonts.googleapis.com/css2?family=Mansalva&display=swap");
+    </style> -->
   </head>
   <body>
     <div class="header">
-      <img class="myTitle" src="img/title.png" alt="title" />
+      <h1>My Task Board</h1>
+      <!-- <img class="myTitle" src="img/title.png" alt="title" /> -->
     </div>
     <div class="main">
-      <img class="myFormbg1" src="img/formbg.jpg" alt="formbg" />
-      <img class="myFormbg2" src="img/formbg.jpg" alt="formbg" />
-      <img class="myFormbg3" src="img/formbg.jpg" alt="formbg" />
-      <img class="myFormbg4" src="img/formbg.jpg" alt="formbg" />
+      <form id="myForm" action="javascript:addNewMission()">
+        <label for="missionData">Mission Data:</label>
+        <input
+          type="text"
+          id="missionData"
+          name="missionData"
+          placeholder="I need to do..."
+          required
+        /><br />
+        <label for="missionDate">Due date for the task:</label>
+        <input
+          type="date"
+          id="missionDate"
+          name="missionDate"
+          required
+        /><br /><br />
+        <input type="submit" value="Save" />
+        <input type="reset" value="Reset form" />
+      </form>
     </div>
     <div class="footer"></div>
   </body>

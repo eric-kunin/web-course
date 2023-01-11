@@ -1,9 +1,8 @@
-// const main = document.querySelector('.main');
-// const img = document.createElement('img');
-// img.classList.add('myFormbg','center-image');
-// img.src = "img/formbg.jpg";
-// img.alt = "formbg";
-
-// for(var i = 0; i < 4; i++) {
-//   main.appendChild(img.cloneNode(true));
-// }
+var missionList = [];
+const addNewMission = () => {
+    const newMission = new Object();
+    newMission.missionData = document.getElementById("missionData").value;
+    newMission.missionDate = document.getElementById("missionDate").value;
+    missionList.push(newMission);
+    document.getElementById("myForm").reset();
+  };

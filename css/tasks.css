@@ -1,5 +1,10 @@
+* {
+  box-sizing:border-box;
+}
+
 body {
-  background-image: url('../img/tile.jpg');
+  background-image: url('/img/tile.jpg');
+  margin: 0;
 }
 
 /* do in the center! */
@@ -7,7 +12,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80px; /* set specific height */
+  height: 125px; /* set specific height */
+  margin-top: 5%;
+  font-size: 30px;
+}
+
+h1{
+  font-family: 'Mansalva', cursive;
 }
 
 .myTitle{
@@ -16,15 +27,19 @@ body {
 }
 
 .main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width:600px;
+  background: #000;
+  background: url("/img/formbg.jpg");
+  min-height:160px;
+  background-repeat:repeat-y;
+  margin-inline:auto;
+  line-height:33px;
+  padding:20px 10px 0 90px;
 }
 
-.myFormbg {
-  margin:auto;
-  max-width: 80%; /* You can adjust this value */
-}
+
+
+
 
 
 
