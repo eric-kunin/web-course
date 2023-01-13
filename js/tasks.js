@@ -13,7 +13,7 @@ const addNewMission = () => {
     // Create an image element with the user's text
     // Create a container div element
     var container = document.createElement("div");
-    container.style.cssText = "position:relative; width:200px; height:200px;";
+    container.style.cssText = "position:relative; width:200px; height:200px; opacity:0; animation: fadein 0.5s; animation-fill-mode: forwards;";
 
     // Create an image element
     var newImg = document.createElement("img");
@@ -27,7 +27,6 @@ const addNewMission = () => {
 
     // Create a date element
     var date = document.createElement("div");
-    // date.innerText = missionDate.toLocaleDateString("he-IL", {day: "2-digit", month: "2-digit", year: "numeric"});
     date.innerText = missionDate.getDate() + '/' + (missionDate.getMonth()+1) + '/' + missionDate.getFullYear();
     date.style.cssText = "position:absolute; left:7px; top:77%; width:82%; height:5%; color:black;";
 
@@ -35,13 +34,13 @@ const addNewMission = () => {
     var time = document.createElement("div");
     time.innerText = missionTime;
     time.style.cssText = "position:absolute; left:7px; top:85%; width:82%; height:5%; color:black;";
+   
     // Append the elements to the container
     container.appendChild(newImg);
     container.appendChild(text);
     container.appendChild(date);
     container.appendChild(time);
 
-    // Append the container
     // Append the container to the HTML document
     var footer = document.getElementById("footer");
     footer.appendChild(container);

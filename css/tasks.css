@@ -56,6 +56,11 @@ h1{
   overflow-y: scroll;
 } */
 
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 
 
 
