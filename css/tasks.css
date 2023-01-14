@@ -12,13 +12,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 125px; /* set specific height */
-  margin-top: 5%;
-  font-size: 30px;
+  height: 90px; /* set specific height */
+  margin-top: 10%;
+  /* font-size: 30px; */
 }
 
 h1{
   font-family: 'Mansalva', cursive;
+  font-size: 50px;
+  font-weight: bold;
+  color: black;
 }
 
 .myTitle{
