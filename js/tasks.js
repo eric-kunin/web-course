@@ -103,7 +103,3 @@ window.onload = function() {
     });
 };
 
-
-
-
-
