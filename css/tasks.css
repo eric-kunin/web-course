@@ -45,6 +45,14 @@ h1{
   to   { opacity: 1; }
 }
 
+.delete-btn {
+  display: none;
+}
+
+container:hover .delete-btn {
+  display: block;
+}
+
 
 
 

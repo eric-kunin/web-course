@@ -1,3 +1,4 @@
+//  If localStorage.getItem("missionList") returns null, then an empty array is assigned to missionList
 var missionList = JSON.parse(localStorage.getItem("missionList")) || [];
 
 const addNewMission = () => {
@@ -21,6 +22,11 @@ const addNewMission = () => {
     var container = document.createElement("div");
     container.style.cssText = "position:relative; width:200px; height:200px; opacity:0; animation: fadein 0.5s; animation-fill-mode: forwards;";
 
+    var deleteBtn = document.createElement("button");
+    deleteBtn.innerHTML = "<span class='glyphicon glyphicon-remove'></span>";
+    deleteBtn.classList.add("delete-btn");
+
+
     // Create an image element
     var newImg = document.createElement("img");
     newImg.src = "img/notebg.png";
@@ -32,11 +38,19 @@ const addNewMission = () => {
     text.style.cssText = "position:absolute; left:14px; top:28px; width:73%; height:61%; color:black;overflow-x:scroll;overflow-y:scroll;resize:none;";
 
     // Create a date element
-    var date = document.createElement("div");
-    var day = missionDate.getDate();
-    var month = (missionDate.getMonth()+1);
-    date.innerText = day + '/' + month + '/' + missionDate.getFullYear();
-    date.style.cssText = "position:absolute; left:14px; top:77%; width:82%; height:5%; color:black;"
+var date = document.createElement("div");
+var day = newMission.missionDate.getDate();
+var month = (newMission.missionDate.getMonth()+1);
+    if (day < 10) {
+        day = "0" + day;
+    }
+    if (month < 10) {
+        month = "0" + month;
+    }
+date.innerText = day + '/' + month + '/' + newMission.missionDate.getFullYear();
+date.style.cssText = "position:absolute; left:14px; top:77%; width:82%; height:5%; color:black;"
+
+
     // Create a time element
     var time = document.createElement("div");
     time.innerText = missionTime;
@@ -46,6 +60,21 @@ const addNewMission = () => {
     container.appendChild(text);
     container.appendChild(date);
     container.appendChild(time);
+    container.appendChild(deleteBtn);
+
+    deleteBtn.addEventListener("click", function() {
+        var noteText = this.parentNode.querySelector('textarea#missionData').value;
+        var index = missionList.findIndex(x => x.missionData === noteText);
+    
+        // Remove the note from the missionList array
+        missionList.splice(index, 1);
+        // Update the LocalStorage with the new missionList array
+        localStorage.setItem("missionList", JSON.stringify(missionList));
+    
+        // Remove the container div element from the HTML document
+        this.parentNode.remove();
+    });
+    
 
     // Append the container to the HTML document
     var footer = document.getElementById("footer");
@@ -82,6 +111,12 @@ window.onload = function() {
         var date = new Date(mission.missionDate);
         var day = date.getDate();
         var month = (date.getMonth()+1);
+        if (day < 10) {
+            day = "0" + day;
+        }
+        if (month < 10) {
+            month = "0" + month;
+        }
         var dateDiv = document.createElement("div");
         dateDiv.innerText = day + '/' + month + '/' + date.getFullYear();
         dateDiv.style.cssText = "position:absolute; left:14px; top:77%; width:82%; height:5%; color:black;";
