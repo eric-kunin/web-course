@@ -16,7 +16,7 @@ const addNewMission = () => {
     var myHTML = "";
     missionList.map((item) => {
       myHTML += `
-      <div class="col-lg-3 col-md-3 col-sm-6 my-2 my-class">
+      <div class="col-lg-3 col-md-3 col-sm-6 my-2 my-class" style="opacity:0; animation: fadein 0.5s; animation-fill-mode: forwards;">
   <img src="img/notebg.png" alt="notebg"; style="width:75%; height:75%;"/>
   <textarea id="textarea" style="position: relative;top: -63%;left:5%;width:55%; height:43%; color:black;overflow-x:scroll;overflow-y:scroll;resize:none;">${item.missionData}</textarea>
 </div>
