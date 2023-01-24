@@ -16,8 +16,8 @@ const addNewMission = () => {
     var myHTML = "";
     missionList.map((item) => {
       myHTML += `
-      <div class="col-lg-3 col-md-4 col-sm-6 my-2 my-class">
-  <img src="img/notebg.png" alt="notebg";/>
+      <div class="col-lg-3 col-md-3 col-sm-6 my-2 my-class">
+  <img src="img/notebg.png" alt="notebg"; style="width:75%; height:95%;"/>
 </div>
       `;
     });
