@@ -23,8 +23,8 @@
       rel="stylesheet"
     />
     <!-- files -->
-    <link rel="stylesheet" href="css/tasks.css" />
-    <script defer src="js/tasks.js"></script>
+    <link rel="stylesheet" href="css/note.css" />
+    <script defer src="js/note.js"></script>
     <title>Task Board</title>
   </head>
   <body>
@@ -36,18 +36,18 @@
       </div>
       <!-- main content -->
       <div class="main">
-        <form id="myForm" action="javascript:addNewMission()">
+        <form id="myForm" action="javascript:handleForm()">
           <!-- data -->
           <input
             type="text"
-            id="missionData"
-            placeholder="Mission Data:"
+            id="noteData"
+            placeholder="Note Data:"
             required
           /><br />
           <!-- date -->
-          <input type="date" id="missionDate" required /><br />
+          <input type="date" id="noteDate" required /><br />
           <!-- time -->
-          <input type="time" id="missionTime" required /><br />
+          <input type="time" id="noteTime" required /><br />
           <!-- buttons -->
           <input class="btn btn-success" type="submit" value="Save" />
           <input class="btn btn-danger" type="reset" value="Reset" />
