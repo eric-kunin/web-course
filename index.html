@@ -1,3 +1,8 @@
+<!-- 
+  Summary: 
+  This is a note project with adding and deleting note images with text
+  , along with date and time.
+ -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,35 +23,54 @@
       rel="stylesheet"
     />
     <!-- files -->
-    <link rel="stylesheet" href="css/tasks.css" />
-    <script defer src="js/tasks.js"></script>
+    <link rel="stylesheet" href="css/note.css" />
+    <script defer src="js/note.js"></script>
     <title>Task Board</title>
   </head>
   <body>
-    <div class="container p-5">
+    <!-- container for bootstrap -->
+    <div class="container">
+      <!-- header -->
       <div class="header">
         <h1>My Task Board</h1>
       </div>
+      <!-- main content -->
       <div class="main">
-        <form id="myForm" action="javascript:addNewMission()">
+        <form id="myForm" action="javascript:handleForm()">
           <!-- data -->
           <input
             type="text"
             id="missionData"
+            name="missionData"
             placeholder="I need to do..."
             required
           /><br />
           <!-- date -->
-          <input type="date" id="missionDate" required /><br />
+          <label for="missionDate">Due date for the task:</label>
+          <input
+            type="date"
+            id="missionDate"
+            name="missionDate"
+            required
+          /><br />
           <!-- time -->
-          <input type="time" id="missionTime" required /><br />
+          <label for="missionTime">Target time for the mission:</label>
+          <input
+            type="time"
+            id="missionTime"
+            name="missionTime"
+            required
+          /><br />
           <!-- buttons -->
           <input class="btn btn-success" type="submit" value="Save" />
           <input class="btn btn-danger" type="reset" value="Reset" />
         </form>
       </div>
-      <div id="footer" class="footer p-5 d-flex flex-wrap">
-        <!-- <img src="img/notebg.png" alt="notebg" /> -->
+      <!-- inject to footer id -->
+      <!-- footer -->
+      <div id="footer" class="footer row my-4">
+        <!-- An example that should be presented (the image):
+        <img src="img/notebg.png" alt="notebg" /> -->
       </div>
     </div>
   </body>
