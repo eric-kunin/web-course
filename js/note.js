@@ -27,10 +27,9 @@ const handleForm = () => {
     var myHTML = "";
     noteList.map((item,index) => {
       myHTML += `
-      <div id="myDiv-${index}" class="col-lg-3 col-md-3 col-sm-6 my-2 my-class" style="position:relative;opacity:0; animation: fadein 0.5s; animation-fill-mode: forwards;">
-  <img src="img/notebg.png" id="img" alt="notebg"; style="width:75%; height:85%;"/>
-  <button class="btn" onclick="removeNote(${index})"><img src="img/close.png" width="35px";/></button>
-  <textarea id="myData" style="position:absolute;top:3%;left:5%;width:55%; height:43%; color:black;overflow-x:scroll;overflow-y:scroll;resize:none;">${item.noteData}</textarea>
+      <div id="myDiv-${index}" class="col-lg-3 col-md-3 col-sm-6 my-2 my-class">
+  <img src="img/notebg.png" id="img" alt="notebg" style="width:75%; height:85%;"/>
+  <button class="btn" onclick="removeNote(${index})"><img src="img/close.png" width="35"/></button>
   <span id="myDate" style="position:absolute;color:black;">${pretifyDate(item.noteDate)}</span>
   <span id="myTime" style="position:absolute;color:black;">${item.noteTime}</span>
 </div>
