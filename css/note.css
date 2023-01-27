@@ -60,7 +60,15 @@ h1{
   font-size: 150px;
   color: #000000;
 } */
-
+/* p{
+  max-width:150px;
+  max-height: 120px;
+  overflow-x: auto;
+  word-wrap: break-word;
+  margin: auto;
+  margin-right: 12px;
+  
+} */
 
 
 
