@@ -71,7 +71,7 @@ h1{
 } */
 
 #noteData {
-  width: 30%;
+  width: 35%;
 }
 
 #noteDate{
@@ -80,6 +80,22 @@ h1{
 #noteTime{
   width: 19%;
 }
+
+.fa-solid.fa-xmark {
+  font-size: 190%;
+  /* transform: rotate(30deg); */
+}
+
+/* .my-class:hover .btn {
+  display: block;
+}
+.btn {
+  display: none;
+} */
+
+  
+  
+
 
 
 

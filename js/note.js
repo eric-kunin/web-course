@@ -29,7 +29,9 @@ const handleForm = () => {
       myHTML += `
       <div id="myDiv-${index}" class="col-lg-3 col-md-3 col-sm-6 my-2 my-class" style="position: relative;">
   <img src="https://i.postimg.cc/NGPxxkkb/notebg.png" id="img" alt="notebg" style="width:75%; height:85%;"/>
-  <button class="btn" onclick="removeNote(${index})" style="position:absolute;top:5%;left:45%;color:black;"><img src="https://i.postimg.cc/J0YFjy1n/close2.png" width="25"/></button>
+  <button class="btn" onclick="removeNote(${index})" style="position:absolute;top:5%;left:45%;color:black;">
+  <i class="fa-solid fa-xmark"></i>
+</button>
   <p style="position:absolute;top:15%;left:11%;color:black;max-width:150px;
   max-height: 120px;
   overflow-x: auto;
@@ -57,3 +59,4 @@ const  removeNote=(index) =>{
 }
 
 // <button class="btn" onclick="removeNote(${index})"><span class="glyphicon glyphicon-remove"></span></button>
+
