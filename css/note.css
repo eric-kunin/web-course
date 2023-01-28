@@ -3,7 +3,7 @@
 }
 
 body {
-  background-image: url('/img/tile.jpg');
+  background-image: url('https://i.postimg.cc/MZyW79wJ/tile.jpg');
   margin: 0;
 }
 
@@ -32,12 +32,12 @@ h1{
 .main {
   max-width:600px;
   background: #000;
-  background: url("/img/formbg.jpg");
+  background: url("https://i.postimg.cc/Bbh75WQC/formbg.jpg");
   min-height:160px;
   background-repeat:repeat-y;
   margin-inline:auto;
   line-height:33px;
-  padding:20px 10px 0 90px;
+  padding:18px 10px 0 90px;
   /* text-align: center; */
 }
 
@@ -70,6 +70,16 @@ h1{
   
 } */
 
+#noteData {
+  width: 30%;
+}
+
+#noteDate{
+  width: 28%;
+}
+#noteTime{
+  width: 19%;
+}
 
 
 
