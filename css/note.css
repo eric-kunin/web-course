@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+
 * {
   box-sizing:border-box;
 }
@@ -48,6 +50,7 @@ h1{
 
 .my-class {
   margin-left: -47px;
+  font-family:'Fuzzy Bubbles', cursive;
 }
 
 .footer {
@@ -71,40 +74,48 @@ h1{
 } */
 
 #noteData {
-  width: 35%;
+  width: 30%;
 }
 
 #noteDate{
   width: 28%;
 }
+
 #noteTime{
   width: 19%;
 }
 
-.fa-solid.fa-xmark {
-  font-size: 190%;
-  /* transform: rotate(30deg); */
+.img + button {
+  display:none;
 }
 
-/* .my-class:hover .btn {
-  display: block;
+.img:hover + button {
+  display:block;
 }
-.btn {
-  display: none;
+
+button:hover {
+  display:block;
+}
+
+.fa-xmark {
+  cursor:pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade{
+  animation: fadeIn 1s ;
+  animation-fill-mode: forwards;
+}
+
+/* @keyframes fadeIn {
+   0%{
+       opacity: 0;
+   }
+   100%{
+       opacity: 1;
+   }
 } */
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
