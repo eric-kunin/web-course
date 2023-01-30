@@ -47,18 +47,17 @@ const handleForm = () => {
     var myHTML = "";
     noteList.map((item,index) => {
       myHTML += `
-      <div id="noteNumber-${index}" class="col-lg-3 col-md-3 col-sm-6 my-2 my-class" style="position: relative;width:25%; height:5%;">
-  <img src="https://i.postimg.cc/NGPxxkkb/notebg.png" class="img" alt="notebg" style="width:75%; height:85%;"/>
-  <button class="btn deleteNote" id="deleteNote" onclick="removeNote(${index})" style="position:absolute;top:4%;left:48%;color:black;margin: auto;">
-  <i class="fa-solid fa-xmark" style="font-size:155%;"></i>
+      <div id="noteNumber-${index}" class="col-lg-3 col-md-3 col-sm-6 my-2 my-class image-container" style="position: relative;">
+  <button class="btn deleteNote" id="deleteNote" onclick="removeNote(${index})" style="position:absolute;top:5%;left:66%;color:black;margin: auto;">
+  <i class="fa-solid fa-xmark" style="font-size:205%;"></i>
 </button>
-  <p class="noteP" style="position:absolute;top:18%;left:11%;color:black;max-width:48%;
-  max-height: 42%;
+  <p class="noteP" style="position:absolute;top:19%;left:14%;color:black;max-width:66%;
+  max-height: 55%;
   overflow-x: auto;
   word-wrap: break-word;
   margin: auto;">${item.noteData}<p/>
-  <span id="noteDate" style="position:absolute;top:67%;left:11%;color:black;font-weight:bold;">${pretifyDate(item.noteDate)}</span>
-  <span id="noteTime" style="position:absolute;top:77%;left:11%;color:black;font-weight:bold;">${item.noteTime}</span>
+  <span id="noteDate" style="position:absolute;top:77%;left:14%;color:black;font-weight:bold;">${pretifyDate(item.noteDate)}</span>
+  <span id="noteTime" style="position:absolute;top:85%;left:14%;color:black;font-weight:bold;">${item.noteTime}</span>
 </div>
       `;
     });
