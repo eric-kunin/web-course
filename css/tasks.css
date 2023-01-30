@@ -1,68 +1,179 @@
+/* Import Google font Fuzzy Bubbles */
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+
+/* Set box-sizing to border-box for all elements */
 * {
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
+/* Set background-image for body and remove margin */
 body {
   background-image: url('/img/tile.jpg');
   margin: 0;
 }
 
-/* do in the center! */
+/* Center header */
 .header {
+  /* Set display to flex */
   display: flex;
+  /* Center align items */
   align-items: center;
+  /* Center justify content */
   justify-content: center;
-  height: 90px; /* set specific height */
+  /* Set specific height */
+  height: 90px; 
+  /* Add margin to the top */
   margin-top: 10%;
-  /* font-size: 30px; */
 }
 
-h1{
+/* Style H1 text */
+h1 {
+  /* Set font-family */
   font-family: 'Mansalva', cursive;
+  /* Set font-size */
   font-size: 50px;
+  /* Set font-weight */
   font-weight: bold;
+  /* Set text color */
   color: black;
 }
 
-.myTitle{
-  max-width: 80%; /* You can adjust this value */
-  margin:auto;
+/* Limit width of title */
+.myTitle {
+  /* Adjust max-width value */
+  max-width: 80%;
+  /* Center margin */
+  margin: auto;
 }
 
+/* Style main section */
 .main {
-  max-width:600px;
+  /* Set max-width */
+  max-width: 600px;
+  /* Set background color and image */
   background: #000;
   background: url("/img/formbg.jpg");
-  min-height:160px;
-  background-repeat:repeat-y;
-  margin-inline:auto;
-  line-height:33px;
-  padding:20px 10px 0 90px;
-  /* text-align: center; */
+  /* Set minimum height */
+  min-height: 160px;
+  /* Repeat background-image vertically */
+  background-repeat: repeat-y;
+  /* Center margin */
+  margin-inline: auto;
+  /* Set line height */
+  line-height: 33px;
+  /* Add padding */
+  padding: 18px 10px 0 90px;
 }
 
+/* Fade in animation */
 @keyframes fadein {
+  /* Start with opacity 0 */
   from { opacity: 0; }
-  to   { opacity: 1; }
+  /* End with opacity 1 */
+  to { opacity: 1; }
 }
 
+/* Add font-family and margin-left to class */
 .my-class {
+  /* Add margin */
   margin-left: -47px;
+  /* Set font-family */
+  font-family: 'Fuzzy Bubbles', cursive;
 }
 
+/* Add margin to footer */
 .footer {
-  /* text-align: center; */
-  /* margin-right: 20%; */
-  margin-left: 21%;
+  margin-left: 15%;
 }
 
+/* Set width for note data */
+#noteData {
+  width: 30%;
+}
 
+/* Set width for note date */
+#noteDate {
+  width: 28%;
+}
 
+/* Set width for note time */
+#noteTime {
+  width: 19%;
+}
 
+/* Hide delete note element by default */
+.deleteNote {
+  display: none;
+}
 
+/* Show delete note element on hover */
+.my-class:hover .deleteNote {
+  display: block;
+}
 
+/* Style image container */
+.image-container {
+  width: 200px;                                 /* Set width of image container */
+  height: 260px;                                /* Set height of image container */
+  margin: 15px;                                 /* Add margin to image container */
+  background-image: url('/img/notebg.png');     /* Set background image for container */
+  background-size: cover;                       /* Cover the entire container with background */
+  background-position: center;                  /* Center the background image */
+}
 
+/* Style button on hover */
+button:hover {
+  display:block;                                /* Show button element when hovered over */
+}
 
+/* Style "xmark" icon as cursor */
+.fa-xmark {
+  cursor:pointer;                               /* Show cursor as a pointer when hovering over icon */
+}
 
+/* Style "xmark" icon on hover */
+.fa-xmark:hover {
+  color: red;                                   /* Change color of icon to red on hover */
+}
+
+/* Animation keyframe to fade in element */
+@keyframes fadeIn {
+  from { opacity: 0; }                        /* Start opacity at 0 */
+  to { opacity: 1; }                           /* End opacity at 1 */
+}
+
+/* Style element to fade in */
+.fade{
+  animation: fadeIn 1s ;                       /* Run animation "fadeIn" for 1 second */
+  animation-fill-mode: forwards;               /* Keep end state of animation when complete */
+}
+
+/* Style "p" element */
+p {
+  scrollbar-width: thin;                       /* Set width of scrollbar to "thin" */
+  scrollbar-color: black gray;                 /* Set color of scrollbar to black and track color to gray */
+  border-radius: 10px;                         /* Set border radius to 10px */
+}
+
+/* Style Webkit scrollbar for "p" element */
+p::-webkit-scrollbar {
+  width: 20px;                                 /* Set width of Webkit scrollbar to 20px */
+} 
+
+/* Style Webkit scrollbar width */
+p::-webkit-scrollbar {
+  width: 20px;                                 /* Set width of Webkit scrollbar to 20px */
+}
+ 
+/* Style Webkit scrollbar handle */
+p::-webkit-scrollbar-thumb {
+  background: black;                            /* Set background color of handle to black */
+  border-radius: 5px;                           /* Set border radius of handle to 5px */
+}
+
+/* Style Webkit scrollbar handle on hover */
+p::-webkit-scrollbar-thumb:hover {
+  background: #36454F;                         /* Change background color of handle to #36454F on hover */
+}
 
 
