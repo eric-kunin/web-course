@@ -85,13 +85,28 @@ h1{
   width: 19%;
 }
 
-.img + button {
+/* .my-class:hover .btn {
+  display: block;
+}
+.btn {
+  display: none;
+} */
+
+.deleteNote {
+  display: none;
+}
+
+.my-class:hover .deleteNote {
+  display: block;
+}
+
+/* .myP + button{
   display:none;
 }
 
-.img:hover + button {
+.myP:hover + button{
   display:block;
-}
+} */
 
 button:hover {
   display:block;
@@ -99,6 +114,9 @@ button:hover {
 
 .fa-xmark {
   cursor:pointer;
+}
+.fa-xmark:hover {
+  color: red;
 }
 
 @keyframes fadeIn {
@@ -119,3 +137,35 @@ button:hover {
        opacity: 1;
    }
 } */
+p {
+  scrollbar-width: thin;
+  scrollbar-color: black gray;
+  border-radius: 10px;
+}
+p::-webkit-scrollbar {
+  width: 20px;
+} 
+
+/* width */
+p::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+p::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px grey;  */
+  /* border-radius: 10px; */
+}
+ 
+/* Handle */
+p::-webkit-scrollbar-thumb {
+  background: black; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+p::-webkit-scrollbar-thumb:hover {
+  background: #36454F; 
+}
+
+
